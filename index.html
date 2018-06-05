@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Intro video</title>
+  <link rel="stylesheet" type="text/css" href="./normalize.css">
+  <style>
+    body {
+      background-color: #f9f9f9;
+      font-family: sans-serif;
+      font-size: 16px;
+      color: #3a3a3a;
+    }
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 16px;
+    }
+    h1 {
+      text-align: center;
+      margin: 16px 0;
+    }
+    .ar {
+      text-align: right;
+    }
+    video {
+      width: 100%;
+    }
+    .button-like-link {
+      display: inline-block;
+      color: #3a3a3a;
+      text-decoration: none;
+      text-align: center;
+      margin: 8px 0 0 0;
+      padding: 0 16px;
+      border: none;
+      border-radius: 2px;
+      text-transform: uppercase;
+      cursor: pointer;
+      outline: none;
+      font-weight: 700;
+      min-width: 64px;
+      min-height: 36px;
+      line-height: 36px;
+      background-color: #eee;
+      box-shadow: 0 1px 5px rgba(0,0,0,.2),
+                  0 2px 2px rgba(0,0,0,.14),
+                  0 3px 1px -2px rgba(0,0,0,.12);
+    }
+    button:focus,
+    button:active,
+    button:hover {
+      background-color: #e0e0e0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Intro Video</h1>
+
+      <video
+        src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+        controls
+      >
+    </video>
+
+    <div class="ar">
+      <a
+        href="http://localhost:8000/"
+        class="button-like-link"
+      >
+        Skip
+      </a>
+    </div>
+
+    <script>
+      var video = document.querySelector('video');
+      video.addEventListener('ended', navigateAway);
+      function navigateAway() {
+        window.location.href = 'http://localhost:8000/';
+      }
+  </script>
+</body>
+</html>
