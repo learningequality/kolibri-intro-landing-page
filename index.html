@@ -62,14 +62,14 @@
     <h1>Intro Video</h1>
 
       <video
-        src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+        src="./video.mp4"
         controls
       >
     </video>
 
     <div class="ar">
       <a
-        href="http://localhost:8000/"
+        href="/kolibri"
         class="button-like-link"
       >
         Skip
@@ -80,7 +80,7 @@
       var video = document.querySelector('video');
       video.addEventListener('ended', navigateAway);
       function navigateAway() {
-        window.location.href = 'http://localhost:8000/';
+        window.location.href = '/kolibri';
       }
   </script>
 </body>
